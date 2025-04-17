@@ -49,10 +49,12 @@ export const updateTheme = (
             .join(" ")};
           }
           ${DARK_SELECTOR} {
-            --color-${modeAwareColorName}: ${Color(darkColor)
-            .rgb()
-            .array()
-            .join(" ")};
+            ${LIGHT_SELECTOR} {
+              --color-${modeAwareColorName}: ${Color(darkColor)
+              .rgb()
+              .array()
+              .join(" ")};
+            }
           }
         `;
         }
