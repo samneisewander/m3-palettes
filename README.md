@@ -1,6 +1,6 @@
 # m3-palettes
 
-A module that supports client-side generation of Material 3 color palettes.
+A module that supports client-side generation of Material 3 color palettes. [View a demo](https://samneisewander.github.io/m3-palettes-demo/).
 
 ## Overview
 
