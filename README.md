@@ -1,12 +1,16 @@
-# tailwind-4-material-colors
+# m3-palettes
 
-A module that integrates Material Design 3 color system with Tailwind 4.x.
+A module that supports client-side generation of Material 3 color palettes.
 
 ## Overview
 
-This module is a fork of [tailwind-material-colors](https://tailwind-material-colors-docs.vercel.app/), which supports the full Material Design 3 color system in Tailwind 3.x. Unfortunately, Tailwind 4.0 introduces breaking changes to the plugin API which makes the original module incompatible (there is a way to make it work using the `@config` and `@plugin` directives in the `index.css` file, but this is kind of a hacky solution [More info](https://tailwindcss.com/docs/functions-and-directives#config-directive)).
+This module is a fork of [tailwind-material-colors](https://tailwind-material-colors-docs.vercel.app/), which supports the full Material Design 3 color system in Tailwind 3.x. Unfortunately, Tailwind 4.0 introduces breaking changes to the plugin API which makes the original module incompatible (there is a way to make it work using the `@config` and `@plugin` directives in the `index.css` file, but this is kind of a hacky solution. [More info](https://tailwindcss.com/docs/functions-and-directives#config-directive)).
 
-This module is intended to port the old module to Tailwind 4.0.
+Since [tailwind-material-colors](https://tailwind-material-colors-docs.vercel.app/) is no longer being maintained, I salvaged some parts of it and rewrote them in Typescript so that I could have dynamically generated, Material 3 Design compliant color themes on my portfolio website. Since the module cannot directly configure the Tailwind custom color schemes feature as of v4.0, this module isn't really a "tailwind plugin" so much as it is a utiltiy for generating CSS color themes client-side from a source color using the M3 color utilities library.
+
+This module is NOT intended to be a full web implementation of the Material 3 color specification. It does not support state layers or palette generation from a source image. If you are looking for this kind of tool, check out [actify](https://actifyjs.com/), which seems promising as is still active.
+
+I don't intend to continue supporting this tool.
 
 **Supports**
 - M3 scheme from source color
@@ -16,17 +20,20 @@ This module is intended to port the old module to Tailwind 4.0.
 - State layers
 - M3 Expressive
 
-
-
 ## Usage
 Install the module.
 
-Initialize the Material 3 Color Roles in your `index.css` file using the `@theme` directive. If you just wish to use M3 color without support for contrast, dark mode, etc, just generate the initial RGB values using the [Material 3 Theme Builder](https://material-foundation.github.io/material-theme-builder/).
+Initialize the Material 3 Color Roles in your `index.css` file using the `@theme` directive. If you just wish to use M3 color without support for contrast, dark mode, etc, just generate the initial RGB values using the [Material 3 Theme Builder](https://material-foundation.github.io/material-theme-builder/). 
 
 ```css
 /* index.css */
+
 @import "tailwindcss";
 @theme {
+    /* 
+        The initial rgb values will probably be immediately overwritten in your deployment
+        when the client calls `updateTheme` on page load.
+    */
     --color-*: initial;
     --color-primary: rgb(144 74 68);
     --color-surface-tint: rgb(144 74 68);
@@ -148,8 +155,3 @@ return(
     // ...tsx page code here
 )
 ```
-
-## Roadmap
-I made this project so that I could write my portfolio website using (parts of) the M3 color system inside Tailwind 4.x. Since Google is no longer funding development on Material Web and since Material 3 Expressive will soon be the design language in vogue, it doesn't seem to make sense to spend a bunch of time and effort coding up state layers and optimizations for this module.
-
-So, I'm probably not going to continue developing this project. Instead, we can hope that the Material team will write a web implementation of the new Expressive components for us to use, which will likely contain a color implementation (although they seem to like scss and not tailwind, which is unfortunate).
