@@ -11,5 +11,5 @@
 		"skipLibCheck": true
 	},
 	"include": ["./src/**/*"],
-	"exclude": ["./tests/**/*", "./junk/**/*",]
+	"exclude": ["./tests/**/*", "./utils/**/*",]
 }

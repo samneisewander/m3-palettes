@@ -4,7 +4,7 @@ import { SchemeContent, SchemeExpressive, SchemeFidelity, SchemeMonochrome, Sche
 const DYNAMIC_THEME_STYLESHEET_ID = 'tailwind-material-colors-dynamic-theme';
 /**
  * Updates the Material 3 Color theme on the client side. Intended to be called anytime the
- * primary color is changed, the dark/light mode setting is changed, or the contrast mode is
+ * primary color, generation scheme, dark/light mode setting, or the contrast amount is changed.
  * changed.
  * @param primary A hex color string from which to generate the color pallette
  * @param scheme A string alias for the desired scheme generation class.

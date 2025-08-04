@@ -17,6 +17,8 @@ export type M3Pallette = {
     [Member in M3ColorRole]: string;
 };
 /**
- * A string that describes one of the Material 3 color roles
+ * Union type of string aliases for one of the Material 3 color roles.
+ *
+ * See
  */
 export type M3ColorRole = "background" | "on-background" | "surface" | "surface-dim" | "surface-bright" | "surface-container-lowest" | "surface-container-low" | "surface-container" | "surface-container-high" | "surface-container-highest" | "on-surface" | "surface-variant" | "on-surface-variant" | "inverse-surface" | "inverse-on-surface" | "outline" | "outline-variant" | "surface-tint" | "primary" | "on-primary" | "primary-container" | "on-primary-container" | "inverse-primary" | "secondary" | "on-secondary" | "secondary-container" | "on-secondary-container" | "tertiary" | "on-tertiary" | "tertiary-container" | "on-tertiary-container" | "error" | "on-error" | "error-container" | "on-error-container" | "scrim" | "shadow";

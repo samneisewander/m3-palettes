@@ -32,29 +32,11 @@ export type M3Pallette = {[Member in M3ColorRole]: string}
  * See 
  */
 export type M3ColorRole = 
-    "background" |
-    "on-background" |
-    "surface" |
-    "surface-dim" |
-    "surface-bright" |
-    "surface-container-lowest" |
-    "surface-container-low" |
-    "surface-container" |
-    "surface-container-high" |
-    "surface-container-highest" |
-    "on-surface" |
-    "surface-variant" |
-    "on-surface-variant" |
-    "inverse-surface" |
-    "inverse-on-surface" |
-    "outline" |
-    "outline-variant" |
-    "surface-tint" |
     "primary" |
+    "surface-tint" |
     "on-primary" |
     "primary-container" |
     "on-primary-container" |
-    "inverse-primary" |
     "secondary" |
     "on-secondary" |
     "secondary-container" |
@@ -67,5 +49,35 @@ export type M3ColorRole =
     "on-error" |
     "error-container" |
     "on-error-container" |
+    "background" |
+    "on-background" |
+    "surface" |
+    "on-surface" |
+    "surface-variant" |
+    "on-surface-variant" |
+    "outline" |
+    "outline-variant" |
+    "shadow" |
     "scrim" |
-    "shadow"
+    "inverse-surface" |
+    "inverse-on-surface" |
+    "inverse-primary" |
+    "primary-fixed" |
+    "on-primary-fixed" |
+    "primary-fixed-dim" |
+    "on-primary-fixed-variant" |
+    "secondary-fixed" |
+    "on-secondary-fixed" |
+    "secondary-fixed-dim" |
+    "on-secondary-fixed-variant" |
+    "tertiary-fixed" |
+    "on-tertiary-fixed" |
+    "tertiary-fixed-dim" |
+    "on-tertiary-fixed-variant" |
+    "surface-dim" |
+    "surface-bright" |
+    "surface-container-lowest" |
+    "surface-container-low" |
+    "surface-container" |
+    "surface-container-high" |
+    "surface-container-highest"
