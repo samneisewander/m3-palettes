@@ -1,6 +1,6 @@
 {
   "name": "m3-palettes",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "homepage": "https://samneisewander.github.io/m3-palettes-demo/",
   "description": "TailwindCSS Plugin to use the Material 3 Color System with Tailwind",
