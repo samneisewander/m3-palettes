@@ -81,3 +81,18 @@ export type M3ColorRole =
     "surface-container" |
     "surface-container-high" |
     "surface-container-highest"
+
+export interface M3Theme {
+    primary: string,
+    scheme: SchemeStringType,
+    darkMode: boolean,
+    contrast: number
+}
+
+export type M3ThemeContext = {
+    state: { theme: M3Theme},
+    actions: { 
+        setThemeState: React.Dispatch<React.SetStateAction<M3Theme>>,
+        generateThemeCss: (theme: M3Theme) => void
+    }
+}

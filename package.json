@@ -1,6 +1,6 @@
 {
   "name": "m3-palettes",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "homepage": "https://samneisewander.github.io/m3-palettes-demo/",
   "description": "TailwindCSS Plugin to use the Material 3 Color System with Tailwind",
@@ -19,6 +19,7 @@
     "@material/material-color-utilities": "^0.3.0",
     "@types/color": "^4.2.0",
     "color": "^4.2.3",
+    "react": "^19.1.1",
     "tailwindcss": "^4.1.10"
   },
   "keywords": [
@@ -32,6 +33,7 @@
   ],
   "devDependencies": {
     "@jest/globals": "^29.7.0",
+    "@types/react": "^19.1.9",
     "jest": "^29.7.0",
     "ts-jest": "^29.3.4",
     "typescript": "^5.8.3"

@@ -1,6 +1,7 @@
-.vscode
-node_modules
+.vscode/
+node_modules/
 yarn.lock
 package-lock.json
 lib/
 .tool-versions
+dist/

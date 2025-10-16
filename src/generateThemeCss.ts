@@ -1,6 +1,6 @@
 import Color from 'color'
 import { tailwindThemeFromColor } from './tailwindThemeFromColor.js'
-import { SchemeStringType, SchemeType } from './types.js'
+import { M3Theme, SchemeStringType, SchemeType } from './types.js'
 import {
 	SchemeContent,
 	SchemeExpressive,
@@ -23,12 +23,12 @@ const DYNAMIC_THEME_STYLESHEET_ID = 'tailwind-material-colors-dynamic-theme'
  * @param contrast A number between -1 (less contrast) and 1 (more contrast) that 
  * determines the contrast. 
  */
-export function updateTheme(
-	primary: string,
-	scheme: SchemeStringType,
-	darkMode: boolean,
-	contrast: number,
-) {
+export function generateThemeCss({
+	primary,
+	scheme,
+	darkMode,
+	contrast,
+}: M3Theme) {
 
 	const SchemeObjects: { [Member in SchemeStringType]: SchemeType } = {
 		content: SchemeContent,
